@@ -9,6 +9,21 @@ table {
         }
     }
 
+    &.dataTable{
+        th{
+            &.focus {
+                outline: 2px solid #1ABB9C !important;
+                outline-offset: -1px;
+            }
+        }
+        td {
+            &.focus {
+                outline: 2px solid #1ABB9C !important;
+                outline-offset: -1px;
+            }
+        }
+    }
+
     &.tile {
         h3,
         h4,
