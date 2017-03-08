@@ -73,12 +73,6 @@ table.countries_list td {
     border-top: 1px solid #eeeeee;
 }
 
-.dataTables_paginate a {
-    padding: 6px 9px !important;
-    background: #ddd !important;
-    border-color: #ddd !important;
-}
-
 .paging_full_numbers a.paginate_active {
     background-color: rgba(38, 185, 154, 0.59) !important;
     border-color: rgba(38, 185, 154, 0.59) !important;
@@ -112,59 +106,6 @@ table.jambo_table tbody tr.selected {
 table.jambo_table tbody tr.selected td {
     border-top: 1px solid rgba(38, 185, 154, 0.40);
     border-bottom: 1px solid rgba(38, 185, 154, 0.40);
-}
-
-.dataTables_paginate a {
-    background: #ff0000;
-}
-
-.dataTables_wrapper {
-    position: relative;
-    clear: both;
-    zoom: 1;
-}
-
-.dataTables_processing {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    height: 30px;
-    margin-left: -125px;
-    margin-top: -15px;
-    padding: 14px 0 2px 0;
-    border: 1px solid #ddd;
-    text-align: center;
-    color: #999;
-    font-size: 14px;
-    background-color: white;
-}
-
-.dataTables_length {
-    width: 40%;
-    float: left;
-}
-
-.dataTables_filter {
-    width: 50%;
-    float: right;
-    text-align: right;
-}
-
-.dataTables_info {
-    width: 60%;
-    float: left;
-}
-
-.dataTables_paginate {
-    float: right;
-    text-align: right;
-}
-
-table.dataTable th.focus,
-table.dataTable td.focus {
-    outline: 2px solid #1ABB9C !important;
-    outline-offset: -1px;
 }
 
 table.display {
@@ -202,15 +143,6 @@ table.display thead th:active, table.display thead td:active {
     outline: none;
 }
 
-.dataTables_scroll {
-    clear: both;
-}
-
-.dataTables_scrollBody {
-    *margin-top: -1px;
-    -webkit-overflow-scrolling: touch;
-}
-
 .top, .bottom {}
 .top .dataTables_info {
     float: none;
@@ -218,10 +150,6 @@ table.display thead th:active, table.display thead td:active {
 
 .clear {
     clear: both;
-}
-
-.dataTables_empty {
-    text-align: center;
 }
 
 tfoot input {

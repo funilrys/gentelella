@@ -51,3 +51,16 @@
     width: 60%;
     float: left;
 }
+
+.dataTables_scroll {
+    clear: both;
+}
+
+.dataTables_scrollBody {
+    *margin-top: -1px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dataTables_empty {
+    text-align: center;
+}
