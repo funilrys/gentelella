@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
 
@@ -21,21 +21,13 @@ gulp.task('scripts', function() {
       .pipe(browserSync.stream());
 });
 
-// TODO: Maybe we can simplify how sass compile the minify and unminify version
-var compileSASS = function (filename, options) {
-  return sass('src/scss/*.scss', options)
+gulp.task('sass', function() {
+    return gulp.src('src/scss/main.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions', '> 5%'))
-        .pipe(concat(filename))
+        .pipe(concat('custom.css'))
         .pipe(gulp.dest(DEST+'/css'))
         .pipe(browserSync.stream());
-};
-
-gulp.task('sass', function() {
-    return compileSASS('custom.css', {});
-});
-
-gulp.task('sass-minify', function() {
-    return compileSASS('custom.min.css', {style: 'compressed'});
 });
 
 gulp.task('browser-sync', function() {

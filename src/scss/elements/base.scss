@@ -1,0 +1,66 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: #73879C;
+  font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.471;
+}
+
+a {
+  color: #5A738E;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+// menu width based on screen size and toggle
+$normal-menu-width: 230px;
+$compact-menu-width: 75px;
+$hidden-menu-width: 0px;
+
+@media (max-width: 1000px) {
+  .left-col {
+    display: inherit;
+    width: $compact-menu-width;
+
+    & + .right-col {
+      margin-left: $compact-menu-width;
+    }
+
+    &.compact {
+      display: none;
+
+      & + .right-col {
+        margin-left: $hidden-menu-width;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .left-col {
+    width: $normal-menu-width;
+
+    & + .right-col {
+      margin-left: $normal-menu-width;
+    }
+
+    &.compact {
+      width: $compact-menu-width;
+
+      & + .right-col {
+        margin-left: $compact-menu-width;
+      }
+    }
+  }
+}
+
+

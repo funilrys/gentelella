@@ -1,0 +1,40 @@
+@import "menu-items";
+@import "profile";
+@import "title";
+
+.left-col {
+  background: #2A3F54;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  // both views
+  @include profile();
+  @include default-title();
+  @include default-menu();
+
+  // compact view
+  @mixin compact {
+    @include title(27px, none, 18px);
+    @include compact-menu();
+
+    .profile{
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    @include compact();
+  }
+
+  &.compact {
+    @include compact();
+  }
+
+  // normal view
+  @media (min-width: 1000px) {
+    @include title(22px, inherit, 10px);
+    @include normal-menu();
+  }
+
+}

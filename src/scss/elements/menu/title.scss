@@ -1,0 +1,29 @@
+@mixin default-title(){
+  .title {
+    a {
+      color: #ECF0F1;
+    }
+
+    i {
+      border: 1px solid #EAEAEA;
+      padding: 5px 6px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin title($a-font-size, $display-span, $title-padding-vertical) {
+
+  .title {
+    padding: 12px $title-padding-vertical;
+
+    a {
+      font-size: $a-font-size;
+    }
+
+    span {
+      display: $display-span;
+    }
+  }
+
+}

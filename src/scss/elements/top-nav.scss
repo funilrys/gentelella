@@ -1,0 +1,66 @@
+.top-nav {
+  background: #EDEDED;
+  border-bottom: 1px solid #D9DEE4;
+  margin-bottom: 10px;
+
+  .container-fluid {
+    padding-right: 0;
+  }
+
+  .toggle {
+    margin-top: 8px;
+
+    a {
+      font-size: 26px;
+    }
+  }
+
+  @mixin active-li {
+    background: #D9DEE4;
+  }
+
+  ul.nav {
+    & > li {
+
+      &.open {
+        & > a {
+          @include active-li;
+
+          &:focus, &:hover {
+            @include active-li;
+          }
+        }
+      }
+
+      & > a {
+        font-weight: 500;
+        line-height: 32px;
+        color: #515356;
+
+        &:focus, &:hover {
+          @include active-li;
+        }
+      }
+
+    }
+  }
+
+  ul.dropdown-menu {
+    right: 0;
+    left: auto;
+
+    & > li > a {
+      // can be overrided in bootstrap
+      color: inherit;
+      padding: 5px 20px;
+
+    }
+  }
+
+  .user-profile {
+    img {
+      width: 29px;
+    }
+  }
+
+}

@@ -1,0 +1,35 @@
+@mixin profile() {
+
+  .profile {
+    margin: 20px 0;
+    padding-left: 10px;
+
+    .profile-pic {
+      float: left;
+
+      img {
+        width: 56px;
+        background: #fff;
+
+        // white border
+        border: 1px solid rgba(52, 73, 94, 0.44);
+        padding: 4px;
+      }
+    }
+
+    .profile-info {
+      margin: 7px 0 0 15px;
+      float: left;
+
+      span.hello {
+        color: #BAB8B8;
+      }
+
+      span.name {
+        font-size: 14px;
+        color: #ECF0F1;
+      }
+    }
+  }
+
+}
