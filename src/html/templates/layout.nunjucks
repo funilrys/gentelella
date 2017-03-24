@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "partials/metadata.nunjucks" %}
+
+        <title>Gentelella Alela! | {% block pageTitle %} {% endblock %}</title>
+
+        <!-- Bootstrap -->
+        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- NProgress -->
+        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+        {% block pageStyles %} {% endblock %}
+
+        <!-- jQuery -->
+        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendors/nprogress/nprogress.js"></script>
+
+        {% block pageScripts %} {% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="../build/css/custom.min.css" />
+
+        <script src="../build/js/custom.min.js"></script>
+    </head>
+    <body class=nav-md>
+        {% block content %} {% endblock %}
+    </body>
+</html>

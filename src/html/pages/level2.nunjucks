@@ -1,0 +1,25 @@
+{% extends "layout.nunjucks" %}
+
+{% block pageTitle %}Level2{% endblock %}
+
+{% block content %}
+<div class="container body">
+    <div class="main_container">
+        {% include "partials/sidebar.nunjucks" %}
+        {% include "partials/top-navigation.nunjucks" %}
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Multilevel Menu <small> Page to demonstrate multilevel menu</small></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+        {% include "partials/footer.nunjucks" %}
+    </div>
+</div>
+{% endblock %}
+

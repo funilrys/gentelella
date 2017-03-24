@@ -1,0 +1,36 @@
+{% extends "layout.nunjucks" %}
+
+{% block pageTitle %}Fixed Sidebar{% endblock %}
+
+{% block pageStyles %}
+<!-- jQuery custom content scroller -->
+<link href="../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block pageScripts %}
+<!-- jQuery custom content scroller -->
+<script src="../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container body">
+    <div class="main_container">
+        {% include "partials/sidebar.nunjucks" %}
+        {% include "partials/top-navigation.nunjucks" %}
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+        {% include "partials/footer.nunjucks" %}
+    </div>
+</div>
+{% endblock %}
+
